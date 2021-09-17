@@ -10,6 +10,7 @@ Today I happened upon a fresh Dridex dropper sample from [@Slvlombardo](https://
 
 **Lure**
 The file if opened will show a familiar message asking the user to enable macros and content thereby allowing the malicious content to run.
+
 ![alt text](https://github.com/slaughterjames/Dridex_17092021/blob/main/lure.png)
 
 **No Macros:**
@@ -17,17 +18,21 @@ Straight away, the first thing noticed if you check for macros is that there are
 ![alt text](https://github.com/slaughterjames/Dridex_17092021/blob/main/olevba.png)
 
 **Digging Deeper:**
-In order to make progress on this, the file (effectively a fancy Zip archive) needs to be expanded to look at what's under the hood.
+In order to make progress on this, the file (effectively a fancy Zip archive) needs to be expanded to look at what's under the hood. 
+
 ![alt text](https://github.com/slaughterjames/Dridex_17092021/blob/main/Structure.png)
 
 **XML:**
-Inside the constituent parts of the Excel document is an XML file that is quite interesting!  Sheet1.xml shows us that not only is there a hidden sheet in the Excel document, "Macro1", but also that the code typically stored in an Excel macro is instead here!  
+Inside the constituent parts of the Excel document is an XML file that is quite interesting!  Sheet1.xml shows us that not only is there a hidden sheet in the Excel document, "Macro1", but also that the code typically stored in an Excel macro is instead here!
+
 ![alt text](https://github.com/slaughterjames/Dridex_17092021/blob/main/xml.png)
 
 From this code, we can see that we're interested in a couple of notes (Macro1!$B$231) and (GET.NOTE(Macro1!$B$356, 1, 200)).  This corresponds to:
+
 ![alt text](https://github.com/slaughterjames/Dridex_17092021/blob/main/writefile.png)
 
 and:
+
 ![alt text](https://github.com/slaughterjames/Dridex_17092021/blob/main/command.png)
 
 This is going to be the output file name of the next stage in the infection process and the command to execute it.
@@ -36,6 +41,7 @@ In order to get to that next stage, we'll need to be interested in the cell rang
 
 **HTA File:**
 To save you a bit of suspense, I've included an image of the output below:
+
 ![alt text](https://github.com/slaughterjames/Dridex_17092021/blob/main/badfile1.png)
 
 and:
