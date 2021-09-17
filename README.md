@@ -50,4 +50,9 @@ and:
 
 You'll note that these are the download locations for the next infection stage.
 
+hXXps://cdn[.]discordapp[.]com/attachments/887666017042587651/887666130376884274/9_SensorsApi.dll.dll
+hXXps://cdn[.]discordapp[.]com/attachments/887666439396421665/887666488083873842/0_nfswmiprov.dll.dll
+hXXps://cdn[.]discordapp[.]com/attachments/887666439396421665/887666501413380136/7_kyw7sr03.dll.dll
+hXXps://cdn[.]discordapp[.]com/attachments/887666439396421665/887666498326384670/4_GrooveAudio.dll.dll
+
 Thanks for reading this far!  Hope you've enjoyed this whistlestop tour of this Dridex dropper! 
